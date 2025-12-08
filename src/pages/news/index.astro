@@ -1,0 +1,19 @@
+---
+import type { GetStaticPaths } from "astro";
+import type { MarkdownPost } from '../../types';
+import Layout from '../../layouts/Layout.astro';
+import PostFilter from '../../components/PostFilter.jsx';
+
+const postImports: Record<string, MarkdownPost> = import.meta.glob(
+    '../../../content/news/*.md',
+    { eager: true }
+);
+
+const posts = Object.values(postImports).sort((a, b) => {
+         return new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime()
+        });
+---
+
+<Layout>
+    <PostFilter posts={posts} />
+</Layout>
