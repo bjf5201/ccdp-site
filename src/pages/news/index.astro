@@ -5,7 +5,7 @@ import Layout from '../../layouts/Layout.astro';
 import PostFilter from '../../components/PostFilter.jsx';
 
 const postImports: Record<string, MarkdownPost> = import.meta.glob(
-    '../../../content/news/*.md',
+    '../../../content/**/*.md',
     { eager: true }
 );
 
@@ -15,5 +15,5 @@ const posts = Object.values(postImports).sort((a, b) => {
 ---
 
 <Layout>
-    <PostFilter posts={posts} />
+    <PostFilter posts={posts} client:load/>
 </Layout>
