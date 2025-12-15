@@ -13,6 +13,7 @@ Product backlog for CCDP website prototype.
 
 - Setup Netlify CMS connection
 - Setup basic main pages (About, Get Involved, Elections, Events, and News))
+- Create config that shows "Dev" or something similar in page title when in local development
 
 ## Next Sprint
 
