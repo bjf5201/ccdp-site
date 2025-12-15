@@ -1,9 +1,9 @@
 ---
 title: "Test post"
-slug: "test-post"
 date: 2025-08-10
 summary: "Our first test post"
 tags: ["test", "education"]
+draft: false
 ---
 
 ## First test post

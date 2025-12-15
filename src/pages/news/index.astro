@@ -1,17 +1,17 @@
 ---
-import type { GetStaticPaths } from "astro";
-import type { MarkdownPost } from '../../env';
 import Layout from '../../layouts/Layout.astro';
-import PostFilter from '../../components/PostFilter.jsx';
+import PostFilter from '../../components/PostFilter';
+import { getCollection } from 'astro:content';
 
-const postImports: Record<string, MarkdownPost> = import.meta.glob(
-    '../../content/**/*.md',
-    { eager: true }
-);
+const entries = await getCollection("news", ({ data }) => !data.draft);
 
-const posts = Object.values(postImports).sort((a, b) => {
-         return new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime()
-        });
+const posts = entries
+    .slice()
+    .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+    .map((entry) => ({
+        slug: entry.slug,
+        ...entry.data,
+    }));
 ---
 
 <Layout>

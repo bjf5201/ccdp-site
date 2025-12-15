@@ -1,9 +1,9 @@
 ---
 title: "Welcome to CCDP!"
-slug: "welcome-to-ccdp"
 date: 2025-08-07
 summary: "Our first blog post"
 tags: ["voting", "healthcare", "education"]
+draft: false
 ---
 
 ## First post

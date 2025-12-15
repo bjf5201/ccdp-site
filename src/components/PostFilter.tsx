@@ -1,19 +1,32 @@
 import { useState, useMemo } from 'preact/hooks';
 
-export default function PostFilter({ posts = [] }) {
+export type PostItem = {
+    slug: string;
+    title: string;
+    date: Date;
+    summary?: string;
+    tags: string[];
+    draft: boolean;
+}
+
+type Props = {
+    posts: PostItem[];
+}
+
+export default function PostFilter({ posts }: Props) {
     const allTags = useMemo(() => {
         return Array.from(
             new Set(
-                posts.flatMap((post) => post.frontmatter?.tags ?? [])
+                posts.flatMap((post) => post.tags ?? [])
             )
         );
     }, [posts]);
 
-    const [selectedTag, setSelectedTag] = useState(null);
+    const [selectedTag, setSelectedTag] = useState<string | null>(null);
 
     const filteredPosts = selectedTag
         ? posts.filter((post) =>
-              post.frontmatter?.tags?.includes(selectedTag)
+              post.tags.includes(selectedTag)
           )
         : posts;
 
@@ -44,23 +57,21 @@ export default function PostFilter({ posts = [] }) {
             {/* Post list */}
             <ul>
                 {filteredPosts.map((post) => {
-                    const { frontmatter } = post;
-
                     return (
-                        <li key={frontmatter.slug} className="mb-6">
+                        <li key={post.slug} className="mb-6">
                             <h2 className="text-xl fw-semibold">
-                                {frontmatter.title}
+                                {post.title}
                             </h2>
 
                             <p className="text-sm text-muted">
-                                {frontmatter.date}
+                                {post.date.toLocaleDateString()}
                             </p>
 
-                            <p>{frontmatter.summary}</p>
+                            {post.summary && post.summary.length > 0 && <p>{post.summary}</p>}
 
-                            {frontmatter.tags && (
+                            {post.tags.length > 0 && (
                                 <div className="flex gap-2 text-xs mt-2">
-                                    {frontmatter.tags.map((tag) => (
+                                    {post.tags.map((tag) => (
                                         <span
                                             key={tag}
                                             className="px-2 py-0.5 rounded"
@@ -71,7 +82,7 @@ export default function PostFilter({ posts = [] }) {
                                 </div>
                             )}
 
-                            <a href={`/news/${frontmatter.slug}`} className="text-blue-600 underline mt-2 inline-block">
+                            <a href={`/news/${post.slug}`} className="text-blue-600 underline mt-2 inline-block">
                                 Read more &rarr;
                             </a>
                         </li>
