@@ -1,11 +1,90 @@
 ---
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import "../styles/base.css";
 ---
 
-<Layout>
-	<h1>Welcome to the Chatham County Democratic Party!</h1>
-	<p>This is the official website of the Chatham County Democratic Party. Stay tuned for updates, events, and ways to get involved!</p>
+<Layout title="Chatham County Democratic Party">
+  <div class="home stack-lg">
+    <section class="surface hero stack-md">
+      <p class="eyebrow">Chatham County • North Carolina</p>
+      <h1 class="hero-title">
+        Electing Democrats. Building community. Protecting democracy.
+      </h1>
+      <p class="hero-tagline">
+        The Chatham County Democratic Party organizes volunteers, supports local candidates,
+        and connects neighbors who care about equity, justice, and opportunity for all.
+      </p>
+
+      <div class="hero-actions">
+        <a href="/get-involved" class="btn btn-primary">Get Involved</a>
+        <a href="/events" class="btn btn-secondary">Upcoming Events</a>
+      </div>
+    </section>
+
+    <section class="stack-md">
+      <h2 class="section-title">How You Can Help</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3">
+        <article class="surface stack-sm">
+          <h3>Volunteer</h3>
+          <p>
+            Knock doors, make calls, write postcards, or help with digital outreach —
+            there’s a role for every schedule and comfort level.
+          </p>
+          <a href="/get-involved" class="btn btn-secondary">See opportunities</a>
+        </article>
+
+        <article class="surface stack-sm">
+          <h3>Stay Informed</h3>
+          <p>
+            Read our latest newsletters, action alerts, and updates on local issues
+            that affect Chatham County voters.
+          </p>
+          <a href="/news" class="btn btn-secondary">View news & newsletters</a>
+        </article>
+
+        <article class="surface stack-sm">
+          <h3>Support Our Work</h3>
+          <p>
+            Your contribution keeps organizers in the field, materials on doors,
+            and accurate information in voters’ hands.
+          </p>
+          <a href="/donate" class="btn btn-secondary">Donate</a>
+        </article>
+      </div>
+    </section>
+  </div>
+
+  <section class="stack-md">
+      <h2 class="section-title">Reach Out to Your Legislators</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3">
+        <article class="surface stack-sm">
+          <h3>Robert Reives</h3>
+          <p>
+            Knock doors, make calls, write postcards, or help with digital outreach —
+            there’s a role for every schedule and comfort level.
+          </p>
+          <a href="/get-involved" class="btn btn-secondary">Contact</a>
+        </article>
+
+        <article class="surface stack-sm">
+          <h3>Natalie Murdock</h3>
+          <p>
+            Reach out to Senator Murdock to share your thoughts on legislation.
+          </p>
+          <a href="/news" class="btn btn-secondary">Contact</a>
+        </article>
+
+        <article class="surface stack-sm">
+          <h3>Local and National Representatives</h3>
+          <p>
+            To reach legislators on a more local or national level, you can use the Chatham County Board of Elections website
+			to find contact information and suggested scripts.
+          </p>
+          <a href="/donate" class="btn btn-secondary">Visit Chatham Board of Elections</a>
+        </article>
+      </div>
+    </section>
+  </div>
 </Layout>

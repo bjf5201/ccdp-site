@@ -1,0 +1,31 @@
+/* Created this to make this work with ChatGPT layout given */
+/* Misc layout utilities */
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gap-2 {
+  gap: var(--space-2);
+}
+
+.mb-4 {
+  margin-bottom: var(--space-4);
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.bg-gray-200 {
+    background-color: #e5e7eb;
+}

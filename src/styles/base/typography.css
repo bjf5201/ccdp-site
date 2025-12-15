@@ -1,0 +1,149 @@
+/* -------------------------------------------------------
+   TYPOGRAPHY — CCDP
+   Headings, text sizes, weights, and utility classes
+-------------------------------------------------------- */
+
+/* ### Relevant tokens used in this stylesheet: ###
+FONTS
+--ccdp-font-system: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+--ccdp-mono-font-system: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+--font-family: var(--ccdp-font-system);
+--mono-font-family: var(--ccdp-mono-font-system);
+
+FONT SIZES
+--text-xs: 0.75rem;
+--text-sm: 0.875rem;
+--text-base: 1rem;
+--text-lg: 1.125rem;
+--text-xl: 1.25rem;
+--text-2xl: 1.5rem;
+--text-3xl: 1.875rem;
+
+FONT WEIGHTS
+--weight-normal: 400;
+--weight-medium: 500;
+--weight-semibold: 600;
+--weight-bold: 700;
+
+SPACING SCALE
+--space-1: 0.25rem;
+--space-2: 0.5rem;
+--space-3: 0.75rem;
+--space-4: 1rem;
+--space-5: 1.25rem;
+--space-6: 1.5rem;
+--space-8: 2rem;
+--space-10: 2.5rem;
+
+
+/* ### Base text color & smoothing should already be in base.css ### */
+
+/* ## Headings ## */
+h1,
+.h1 {
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-bold);
+  margin: 0 0 var(--space-3);
+  line-height: 1.1;
+}
+
+h2,
+.h2 {
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-semibold);
+  margin: 0 0 var(--space-3);
+  line-height: 1.2;
+}
+
+h3,
+.h3 {
+  font-size: var(--text-xl);
+  font-weight: var(--weight-semibold);
+  margin: 0 0 var(--space-2);
+  line-height: 1.3;
+}
+
+h4,
+.h4 {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-medium);
+  margin: 0 0 var(--space-2);
+}
+
+/* ## Paragraph & body text ## */
+p {
+  margin: 0 0 var(--space-3);
+}
+
+/* ## Section title helper (used on home “How You Can Help”) ## */
+.section-title {
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-semibold);
+  margin: 0;
+}
+
+/* ## Text size utilities ## */
+.text-xs {
+  font-size: var(--text-xs);
+}
+
+.text-sm {
+  font-size: var(--text-sm);
+}
+
+.text-base {
+  font-size: var(--text-base);
+}
+
+.text-lg {
+  font-size: var(--text-lg);
+}
+
+.text-xl {
+  font-size: var(--text-xl);
+}
+
+.text-2xl {
+  font-size: var(--text-2xl);
+}
+
+.text-3xl {
+  font-size: var(--text-3xl);
+}
+
+/* ## Font weight utilities ## */
+.fw-normal {
+  font-weight: var(--weight-normal);
+}
+
+.fw-medium {
+  font-weight: var(--weight-medium);
+}
+
+.fw-semibold {
+  font-weight: var(--weight-semibold);
+}
+
+.fw-bold {
+  font-weight: var(--weight-bold);
+}
+
+/* ## Muted / secondary text ## */
+.text-muted {
+  color: var(--color-muted);
+}
+
+/* ## Alignment helpers ## */
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}

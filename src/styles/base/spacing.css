@@ -1,0 +1,82 @@
+/* -------------------------------------------------------
+   SPACING UTILITIES — CCDP
+   Vertical rhythm, stacks, and gaps
+-------------------------------------------------------- */
+
+/* ### Relevant tokens used in this stylesheet: ###
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+*/
+
+/* Vertical stacks: space between direct children */
+.stack-xs > * + * {
+  margin-top: var(--space-1);
+}
+
+.stack-sm > * + * {
+  margin-top: var(--space-2);
+}
+
+.stack-md > * + * {
+  margin-top: var(--space-4);
+}
+
+.stack-lg > * + * {
+  margin-top: var(--space-6);
+}
+
+.stack-xl > * + * {
+  margin-top: var(--space-8);
+}
+
+/* Generic margin top helpers (optional) */
+.mt-0 {
+  margin-top: 0;
+}
+
+.mt-xs {
+  margin-top: var(--space-1);
+}
+
+.mt-sm {
+  margin-top: var(--space-2);
+}
+
+.mt-md {
+  margin-top: var(--space-4);
+}
+
+.mt-lg {
+  margin-top: var(--space-6);
+}
+
+/* Generic padding helpers (optional) */
+.px-sm {
+  padding-inline: var(--space-2);
+}
+
+.px-md {
+  padding-inline: var(--space-4);
+}
+
+.px-lg {
+  padding-inline: var(--space-6);
+}
+
+.py-sm {
+  padding-block: var(--space-2);
+}
+
+.py-md {
+  padding-block: var(--space-4);
+}
+
+.py-lg {
+  padding-block: var(--space-6);
+}

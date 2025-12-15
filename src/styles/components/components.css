@@ -1,0 +1,119 @@
+/* -------------------------------------------------------
+   COMPONENTS — CCDP
+   Reusable UI atoms/molecules (cards, buttons, tags)
+-------------------------------------------------------- */
+
+/* Icon wrapper for consistent sizing */
+.icon {
+  font-family: var(--font-icon);
+  font-weight: var(--weight-normal);
+  font-style: normal;
+  font-size: 1.125rem;
+  line-height: 1;
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+/* Card / card */
+.card {
+  background: var(--color-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Variant for lower-emphasis cards */
+.card-subtle {
+  background: var(--color-card-alt);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  padding: var(--space-4);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  .btn-primary {
+    background: var(--color-primary);
+    color: var(--color-white);
+
+    &:hover {
+      filter: brightness(1.05);
+    }
+  }
+
+  .btn-secondary {
+    background: transparent;
+    border-color: var(--color-border);
+    color: var(--color-text);
+
+    &:hover {
+      background: var(--color-card-alt);
+    }
+  }
+
+  /* Text-style button (looks like a link) */
+  .btn-ghost {
+    background: transparent;
+    border-color: transparent;
+    color: var(--color-primary);
+    padding-inline: 0;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* Tiny badge for categories, tags, etc. */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.15rem 0.5rem;
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+
+.badge-secondary {
+  background: var(--color-secondary-light);
+  color: var(--color-secondary);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  background: rgba(15, 23, 42, 0.4);
+  color: var(--color-header-text);
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  font-size: var(--text-xs);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  cursor: pointer;
+
+  span {
+    display: inline-flex;
+  }
+}

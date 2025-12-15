@@ -1,0 +1,58 @@
+/* -------------------------------------------------------
+   NORMALIZE — CCDP
+   Small, custom normalization/reset
+-------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+/* Make main a block in older UAs */
+main {
+  display: block;
+}
+
+/* Remove default margins on common text elements */
+h1,
+h2,
+h3,
+h4,
+p,
+figure {
+  margin: 0;
+}
+
+/* Form elements inherit typography */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+/* Media elements behave predictably */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Basic link behavior */
+a {
+  text-decoration-skip-ink: auto;
+}

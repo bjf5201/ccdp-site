@@ -8,6 +8,13 @@ const { title } = Astro.props;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+  		href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&family=Material+Symbols+Outlined:FILL@0..1,GRAD@0..200,opsz@20..48,wght@100..700&display=swap"
+  		rel="stylesheet"
+	/>
+
     <title>{title ?? "Chatham County Democratic Party"}</title>
   </head>
 
@@ -19,6 +26,7 @@ const { title } = Astro.props;
         <nav class="nav" aria-label="Site Navigation">
 		  <a href="/">Home</a>
 		  <a href="/about">About</a>
+		  <a href="/elections">Elections</a>
           <a href="/get-involved">Get Involved</a>
           <a href="/events">Events</a>
           <a href="/news">News</a>
