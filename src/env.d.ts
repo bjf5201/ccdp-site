@@ -1,5 +1,10 @@
 /// <reference types="astro/client" />
 
+interface ImportMetaEnv {
+  readonly PUBLIC_PREACT_DEVTOOLS: boolean;
+  // more env variables...
+}
+
 declare module '*.md' {
   export const frontmatter: {
     title: string;
