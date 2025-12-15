@@ -1,3 +1,5 @@
+/// <reference types="astro/client" />
+
 declare module '*.md' {
   export const frontmatter: {
     title: string;
@@ -10,10 +12,11 @@ declare module '*.md' {
   export default Content;
 }
 
-declare module '*.astro' {
+/*declare module '*.astro' {
   const Component: any;
   export default Component;
-}
+}*/
+
 export type MarkdownPost = {
   frontmatter: {
     title: string;

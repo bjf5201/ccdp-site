@@ -13,13 +13,17 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# environment variables
-.env.local
-.env.*.local
-.env.production
+# temporary env ignore (remove if you want to explicitly track these later)
+.env
+.env.*
+
+# environment variables (add if you remove the above section)
+#.env.local
+#.env.*.local
+#.env.production
 
 # macOS-specific files
 .DS_Store
 
-# jetbrains setting folder
-.idea/
+# personal documentation files
+status.md
