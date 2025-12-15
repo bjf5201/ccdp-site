@@ -1,11 +1,11 @@
 ---
 import type { GetStaticPaths } from "astro";
-import type { MarkdownPost } from '../../types';
+import type { MarkdownPost } from '../../env';
 import Layout from '../../layouts/Layout.astro';
 import PostFilter from '../../components/PostFilter.jsx';
 
 const postImports: Record<string, MarkdownPost> = import.meta.glob(
-    '../../../content/**/*.md',
+    '../../content/**/*.md',
     { eager: true }
 );
 
